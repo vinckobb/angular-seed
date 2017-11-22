@@ -22,15 +22,7 @@ const WATCH_EXT = build.WATCH_EXT;
  * Middleware
  */
 const staticMiddleware = serveStatic(path.resolve(BASE_DIR));
-const apiMiddleware = proxy('/api', {
-  target: API_PROXY,
-  changeOrigin: true,
-  onProxyReq(proxyReq, req) {
-    const ref = url.parse(req.headers.referer);
-    const origin = 'http://' + ref.host;
-    proxyReq.setHeader('origin', origin);
-  },
-});
+const apiMiddleware = proxy(['/api'], {target: 'https://www.test.com', ws: true, changeOrigin: true});
 const spaMiddleware = function(req, res, next) { //eslint-disable-line no-unused-vars
   req.url = '/index.html';
   next();

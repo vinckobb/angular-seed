@@ -39,7 +39,7 @@
     "postversion": "git commit -a -m \"[bump] $npm_package_version\" && git push"
   },
   "dependencies": {
-    "angular": "1.6.1",
+    "angular": "1.6.3",
     "angular-ui-router": "1.0.0-rc.1",
     "meanie-angular-analytics": "^1.3.1",
     "meanie-angular-api": "^1.17.3",
@@ -94,6 +94,7 @@
     "replace-in-file": "^2.0.3",
     "rimraf": "^2.5.4",
     "serve-static": "^1.11.1",
-    "yargs": "^6.5.0"
+    "yargs": "^6.5.0",
+    "yarn": "1.3.2"
   }
 }

@@ -33,4 +33,6 @@ angular.module('App', [
 
   //Shared filters
   'Shared.Moment.Filter',
+
+  'formio'
 ]);
