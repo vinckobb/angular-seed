@@ -11,7 +11,7 @@ const pkg = require('../package.json');
 //Environment
 const ENV = argv.env || process.env.APP_ENV || 'dev';
 const VERSION = pkg.version;
-const PORT = 8080;
+const PORT = 9090;
 const API_PROXY = 'http://localhost:8081';
 
 //Paths
@@ -47,7 +47,7 @@ const SRC_LIB = [
   'meanie-angular-log/release/meanie-angular-log.js',
   'meanie-angular-storage/release/meanie-angular-storage.js',
   'meanie-angular-store/release/meanie-angular-store.js',
-  'meanie-angular-url/release/meanie-angular-url.js',
+  'meanie-angular-url/release/meanie-angular-url.js'
 ].map(lib => 'node_modules/' + lib);
 
 //Test libraries

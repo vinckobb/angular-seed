@@ -7,7 +7,7 @@ angular.module('App.Home.Controller', [])
 /**
  * Controller
  */
-.controller('HomeCtrl', function(moment) {
+.controller('HomeCtrl', function(moment, $scope, $timeout) {
 
   /**
    * On init
@@ -16,5 +16,14 @@ angular.module('App.Home.Controller', [])
 
     //Set date
     this.now = moment();
+
+    $timeout(function() {
+      $scope.submissionData = angular.merge($scope.submissionData, {
+        data: {
+          poistenec: "Renátka Maláková"
+        }
+      });
+      console.log($scope.submissionData);
+    }, 2500);
   };
 });

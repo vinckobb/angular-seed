@@ -27,6 +27,7 @@ angular.module('App', [
 
   //App components
   'App.Home',
+  'App.Editor',
 
   //Shared services
   'Shared.Moment.Service',
@@ -34,5 +35,26 @@ angular.module('App', [
   //Shared filters
   'Shared.Moment.Filter',
 
-  'formio'
-]);
+  'formio',
+  'ngFormBuilder'
+])
+.config(['formioComponentsProvider', function(formioComponentsProvider) {
+  formioComponentsProvider.register('myfield', {
+    title: 'My Field',
+    template: 'formio/components/icons.html',
+    controller: ['$scope', function($scope) {
+    }],
+    group: 'advanced',
+    icon: 'fa fa-heart-o',
+    settings: {
+      key: "myfield"
+    },
+    views: []
+  });
+}])
+.run(['$templateCache', function($templateCache) {
+  console.log($templateCache);
+  $templateCache.put('formio/components/icons.html',
+    '<div>Hello world!</div>'
+  );
+}]);

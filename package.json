@@ -89,7 +89,7 @@
     "karma-phantomjs-launcher": "^1.0.2",
     "karma-spec-reporter": "0.0.26",
     "merge-stream": "^1.0.1",
-    "parallelshell": "^2.0.0",
+    "parallelshell": "^3.0.2",
     "phantomjs-prebuilt": "^2.1.14",
     "replace-in-file": "^2.0.3",
     "rimraf": "^2.5.4",

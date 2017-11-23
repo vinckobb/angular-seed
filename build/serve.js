@@ -22,7 +22,7 @@ const WATCH_EXT = build.WATCH_EXT;
  * Middleware
  */
 const staticMiddleware = serveStatic(path.resolve(BASE_DIR));
-const apiMiddleware = proxy(['/api'], {target: 'https://www.test.com', ws: true, changeOrigin: true});
+const apiMiddleware = proxy(['/ipep-rest'], {target: 'http://localhost:8080', ws: true, changeOrigin: true});
 const spaMiddleware = function(req, res, next) { //eslint-disable-line no-unused-vars
   req.url = '/index.html';
   next();
