@@ -20,10 +20,15 @@ angular.module('App.Home.Controller', [])
     $timeout(function() {
       $scope.submissionData = angular.merge($scope.submissionData, {
         data: {
-          poistenec: "Renátka Maláková"
+          poistenec: "Renátka Maláková",
+          rodneCislo: "7712125678",
+          datumNarodenia: "12.12.1977",
+          ulica: "Ulicová",
+          cisloDomu: "3",
+          obec: "Banská Bystrica",
+          pobocka: "21"
         }
       });
-      console.log($scope.submissionData);
     }, 2500);
   };
 });
